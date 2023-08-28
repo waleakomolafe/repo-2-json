@@ -1,0 +1,26 @@
+name: 'Repository Html Files 2 Json'
+description: 'Repository Metadata to Json'
+inputs:
+  start-dir:  # id of input
+    description: 'Directory to start scan'
+    required: true
+    default: ['**.{html,htm}', '!**/index.html', '!**/index.htm']
+  base-url:
+    description: 'Base Url'
+    required: true  
+    default: 'https://www.example.com/'
+  extensions:
+    description: 'Extensions of files that should be included'
+    required: false
+    default: ['html','htm']
+  excludes:
+    description: 'Files to exclude'
+    required: false
+    default: ['index.html']
+
+outputs:
+  json:   # id of name output
+    description: 'Json output'
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
