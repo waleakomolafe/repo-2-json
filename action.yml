@@ -4,7 +4,7 @@ inputs:
   start-dir:  # id of input
     description: 'Directory to start scan'
     required: true
-    default: ['**.{html,htm}', '!**/index.html', '!**/index.htm']
+    default: "['**.{html,htm}', '!**/index.html', '!**/index.htm']"
   base-url:
     description: 'Base Url'
     required: true  
@@ -12,11 +12,11 @@ inputs:
   extensions:
     description: 'Extensions of files that should be included'
     required: false
-    default: ['html','htm']
+    default: "['html','htm']"
   excludes:
     description: 'Files to exclude'
     required: false
-    default: ['index.html']
+    default: "['index.html']"
 
 outputs:
   json:   # id of name output
