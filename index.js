@@ -6,8 +6,10 @@ import { parse as HTML, HTMLElement } from 'node-html-parser';          //const 
 
 
 try {
-    const startDir = core.getInput('start-dir');
+    const tmpStartDir = core.getInput('start-dir');
     const baseUrl = core.getInput('base-url');
+
+    const startDir = JSON.parse(tmpStartDir);
 
     const paths = globbySync(startDir, {
         gitignore: true
